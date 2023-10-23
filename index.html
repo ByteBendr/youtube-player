@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Player</title>
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-analytics-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Search for a video...">
+            <button type="button" onclick="search()">Search</button>
+
+            <button type="button" id="sign-in" class="sign-in" onclick="signInWithGoogle()">Sign In with Google</button>
+            <button type="button" id="sign-out" class="sign-out" onclick="signOut()" style="display:none;">Sign Out of Google</button>   
+        </div>
+        <div class="content">
+            <div class="results" id="results"></div>
+            <div class="player" id="player">
+                <iframe width="0" height="0" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-title" id="videoTitle">
+                <span id="titleText"></span>
+            </div>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB7NyVWmMO18657FbLhTEwZCa9133rXW0s",
+            authDomain: "playerv2-3014d.firebaseapp.com",
+            projectId: "playerv2-3014d",
+            storageBucket: "playerv2-3014d.appspot.com",
+            messagingSenderId: "1058014109233",
+            appId: "1:1058014109233:web:a535a6b2c23fe2936e7f10",
+            measurementId: "G-YXFDW5HCX2"
+        };
+        
+        firebase.initializeApp(firebaseConfig);
+        </script>
+        <script>
+            initApp();
+        </script>
+
+
+
+        <div class="footer" id="footer">
+            <p>Made with 💖 by Lucian</p>
+        </div>
+
+
+</body>
+</html>
+
+<!-- END OF FILE -->

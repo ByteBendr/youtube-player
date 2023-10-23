@@ -1,0 +1,185 @@
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 20px;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite alternate;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+input {
+    width: 60%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    flex: 1;
+    transition: border-color 0.3s; /* Add a smooth transition effect */
+}
+
+input:focus {
+    border-color: #FF5733; /* Change border color on focus */
+    outline: none; /* Remove the default outline */
+    box-shadow: 0 0 5px rgba(255, 87, 51, 0.5); /* Add a shadow effect on focus */
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0052aa;
+}
+
+
+
+.sign-in {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.sign-out {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+button.sign-in {
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 15px;
+}
+
+button.sign-in:hover {
+    background-color: #0056b3;
+}
+
+button.sign-out {
+    background-color: #EA4335;
+    border-radius: 15px;
+}
+
+button.sign-out:hover {
+    background-color: #357AE8;
+}
+
+#results {
+    list-style: none;
+    padding: 0;
+}
+
+.result-item {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-item h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.result-item button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.result-item button:hover {
+    background-color: #218838;
+}
+
+.result-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Adjusted margin for spacing */
+}
+
+iframe {
+    max-width: 100%;
+    border: none;
+}
+
+
+.video-title {
+    display: none;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+
+/* Tablet Styles (768px - 991px) */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 768px;
+    }
+   
+}
+
+.footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hide the footer */
+    transition: opacity 0.3s; /* Add a smooth transition effect */
+}
+
+/* END OF FILE */
+
